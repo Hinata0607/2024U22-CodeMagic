@@ -4,9 +4,9 @@ import { TopHeaderLink } from './atom';
 import { TopLayoutProps } from '@/types';
 
 const Links = [
-	{ link: 'info', title: 'お知らせ' },
-	{ link: 'intro', title: 'ゲーム紹介' },
-	{ link: 'login', title: 'ログイン' },
+	{ link: 'info', title: 'お知らせ / Info' },
+	{ link: 'intro', title: 'ゲーム紹介 / Intro' },
+	{ link: 'login', title: 'ログイン / Login' },
 ];
 
 export const TopLayout = ({ children }: TopLayoutProps) => {

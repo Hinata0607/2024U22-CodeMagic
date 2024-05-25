@@ -8,6 +8,7 @@ export const defaultTheme = createTheme({
 			topLayout: {
 				primary: '#111',
 				color: '#aaa',
+				hoverColor: '#fff',
 			},
 		},
 	},
