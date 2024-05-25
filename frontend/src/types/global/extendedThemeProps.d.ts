@@ -4,14 +4,16 @@ declare module '@mui/material/styles' {
 	interface Palette {
 		layout: {
 			topLayout: {
-				main: string;
+				primary: string;
+				color: string;
 			};
 		};
 	}
 	interface PaletteOptions {
 		layout?: {
 			topLayout?: {
-				main?: string;
+				primary?: string;
+				color?: string;
 			};
 		};
 	}

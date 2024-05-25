@@ -8,7 +8,8 @@ export const defaultTheme = createTheme({
 		},
 		layout: {
 			topLayout: {
-				main: '#000',
+				primary: '#000',
+				color: '#fff',
 			},
 		},
 	},

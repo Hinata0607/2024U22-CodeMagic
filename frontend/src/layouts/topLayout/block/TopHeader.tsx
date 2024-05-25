@@ -1,28 +1,31 @@
+import { TopHeaderProps } from '@/types';
 import { Box } from '@mui/material';
 
-export const TopHeader = () => {
+export const TopHeader = ({ children }: TopHeaderProps) => {
 	const HEIGHT = 70;
-	const MAX_HEIGHT = 30
+	const MAX_HEIGHT = 30;
 
 	return (
 		<>
 			<Box
-				position={'fixed'}
+				position="fixed"
 				top={0}
 				left={0}
-				width={'100vw'}
+				display="flex"
+				justifyContent="start"
+				alignItems="center"
+				gap="50px"
+				width="100vw"
 				height={`${HEIGHT}px`}
 				maxHeight={`${MAX_HEIGHT}vh`}
+				p="0 50px"
 				sx={{
-					backgroundColor: '#000',
+					backgroundColor: 'layout.topLayout.primary',
 				}}
-			></Box>
-			<Box
-				width={'100vw'}
-
-		height={`${HEIGHT}px`}
-				maxHeight={`${MAX_HEIGHT}vh`}
-			/>
+			>
+				{children}
+			</Box>
+			<Box width="100vw" height={`${HEIGHT}px`} maxHeight={`${MAX_HEIGHT}vh`} />
 		</>
 	);
-}
+};
