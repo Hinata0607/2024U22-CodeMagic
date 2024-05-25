@@ -1,3 +1,4 @@
+import { TopLayout } from '@/layouts/topLayout';
 import { defaultTheme } from '@/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import type { Metadata } from 'next';
@@ -17,7 +18,7 @@ export default function RootLayout({
 			<ThemeProvider theme={defaultTheme}>
 				<body>
 					<CssBaseline />
-					{children}
+					<TopLayout>{children}</TopLayout>
 				</body>
 			</ThemeProvider>
 		</html>
