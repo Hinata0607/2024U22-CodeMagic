@@ -15,7 +15,7 @@ export const TopBackground = () => {
 			>
 				<Image
 					src="/thumbnail.webp"
-					alt="aa"
+					alt="background"
 					sizes="100vw"
 					fill
 					objectFit="cover"
