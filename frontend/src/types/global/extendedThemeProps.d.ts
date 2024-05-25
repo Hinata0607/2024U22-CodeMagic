@@ -6,6 +6,7 @@ declare module '@mui/material/styles' {
 			topLayout: {
 				primary: string;
 				color: string;
+				hoverColor: string;
 			};
 		};
 	}
@@ -14,6 +15,7 @@ declare module '@mui/material/styles' {
 			topLayout?: {
 				primary?: string;
 				color?: string;
+				hoverColor?: string;
 			};
 		};
 	}

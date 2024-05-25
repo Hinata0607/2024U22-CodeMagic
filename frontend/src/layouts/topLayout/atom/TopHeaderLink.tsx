@@ -10,7 +10,19 @@ export const TopHeaderLink = ({ link, title }: TopHeaderLinkProps) => {
 				textDecoration: 'none',
 			}}
 		>
-			<Typography color="layout.topLayout.color">{title}</Typography>
+			<Typography
+				color="layout.topLayout.color"
+				sx={{
+					transform: 'scale(1)',
+					transition: 'transform 0.4s ease-in-out, color 0.4s ease-in-out',
+					'&:hover': {
+						transform: 'scale(1.2)',
+						color: 'layout.topLayout.hoverColor',
+					},
+				}}
+			>
+				{title}
+			</Typography>
 		</Link>
 	);
 };
