@@ -1,15 +1,24 @@
 'use client';
-import { ReactNode } from 'react';
 import { TopHeader } from './block';
+import { TopHeaderLink } from './atom';
+import { TopLayoutProps } from '@/types';
 
-interface TopLayoutProps {
-	children: ReactNode;
-}
+const Links = [
+	{link: "info", title: "お知らせ"},
+	{link: "intro", title: "ゲーム紹介"},
+	{link: "login", title: "ログイン"},
+]
 
 export const TopLayout = ({ children }: TopLayoutProps) => {
 	return (
 		<>
-			<TopHeader />
+			<TopHeader>
+				{
+					Links.map((link, index) => (
+						<TopHeaderLink key={index} link={link.link} title={link.title} />
+					))
+				}
+			</TopHeader>
 			{children}
 		</>
 	);
