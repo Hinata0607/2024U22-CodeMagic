@@ -1,5 +1,5 @@
 'use client';
-import { TopBackground, TopHeader } from './block';
+import { TopBackground, TopFooter, TopHeader } from './block';
 import { TopHeaderLink } from './atom';
 import { TopLayoutProps } from '@/types';
 
@@ -18,6 +18,8 @@ export const TopLayout = ({ children }: TopLayoutProps) => {
 				))}
 			</TopHeader>
 			{children}
+			<TopFooter />
+
 			<TopBackground />
 		</>
 	);
