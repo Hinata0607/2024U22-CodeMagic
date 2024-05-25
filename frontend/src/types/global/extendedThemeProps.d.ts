@@ -9,6 +9,11 @@ declare module '@mui/material/styles' {
 				hoverColor: string;
 			};
 		};
+		page: {
+			top: {
+				primary: string;
+			};
+		};
 	}
 	interface PaletteOptions {
 		layout?: {
@@ -16,6 +21,11 @@ declare module '@mui/material/styles' {
 				primary?: string;
 				color?: string;
 				hoverColor?: string;
+			};
+		};
+		page?: {
+			top?: {
+				primary?: string;
 			};
 		};
 	}

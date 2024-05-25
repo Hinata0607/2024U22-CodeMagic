@@ -1,5 +1,10 @@
-import { Box } from '@mui/material';
+import { TopNewsArea, TopTransparentArea } from '@/components';
 
 export default function Home() {
-	return <Box width="100vw" height="500px"></Box>;
+	return (
+		<>
+			<TopTransparentArea />
+			<TopNewsArea />
+		</>
+	);
 }

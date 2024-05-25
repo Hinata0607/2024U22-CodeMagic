@@ -18,7 +18,10 @@ export const TopBackground = () => {
 					alt="background"
 					sizes="100vw"
 					fill
-					objectFit="cover"
+					priority
+					style={{
+						objectFit: 'cover',
+					}}
 				/>
 			</Box>
 		</>

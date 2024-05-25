@@ -16,7 +16,10 @@ export const TopHeaderLogo = () => {
 				alt="logo"
 				width={180}
 				height={50}
-				objectFit="cover"
+				priority
+				style={{
+					objectFit: 'contain',
+				}}
 			/>
 		</Link>
 	);

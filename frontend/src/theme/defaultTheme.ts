@@ -11,5 +11,10 @@ export const defaultTheme = createTheme({
 				hoverColor: '#fff',
 			},
 		},
+		page: {
+			top: {
+				primary: '#111',
+			},
+		},
 	},
 });
