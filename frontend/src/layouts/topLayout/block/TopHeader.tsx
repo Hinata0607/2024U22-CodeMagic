@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 
 export const TopHeader = () => {
 	const HEIGHT = 70;
-	const MAX_HEIGHT = 30;
+	const MAX_HEIGHT = 30
 
 	return (
 		<>
@@ -19,9 +19,10 @@ export const TopHeader = () => {
 			></Box>
 			<Box
 				width={'100vw'}
-				height={`${HEIGHT}px`}
+
+		height={`${HEIGHT}px`}
 				maxHeight={`${MAX_HEIGHT}vh`}
 			/>
 		</>
 	);
-};
+}
