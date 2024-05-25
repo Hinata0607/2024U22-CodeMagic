@@ -12,6 +12,8 @@ declare module '@mui/material/styles' {
 		page: {
 			top: {
 				primary: string;
+				card: string;
+				cardColor: string;
 			};
 		};
 	}
@@ -26,6 +28,8 @@ declare module '@mui/material/styles' {
 		page?: {
 			top?: {
 				primary?: string;
+				card?: string;
+				cardColor?: string;
 			};
 		};
 	}

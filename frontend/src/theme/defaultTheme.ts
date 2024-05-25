@@ -14,6 +14,8 @@ export const defaultTheme = createTheme({
 		page: {
 			top: {
 				primary: '#111',
+				card: '#fff',
+				cardColor: '#000',
 			},
 		},
 	},
