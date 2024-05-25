@@ -1,0 +1,8 @@
+*.md
+node_modules
+.next
+out
+public
+.prettierrc.json
+.eslintrc.cjs
+next.config.mjs
