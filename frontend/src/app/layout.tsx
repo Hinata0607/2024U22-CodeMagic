@@ -1,4 +1,4 @@
-import { TopLayout } from '@/layouts/topLayout';
+import { TopLayout } from '@/layouts';
 import { defaultTheme } from '@/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import type { Metadata } from 'next';
