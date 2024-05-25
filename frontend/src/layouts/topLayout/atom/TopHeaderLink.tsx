@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const TopHeaderLink = ({ link, title }: TopHeaderLinkProps) => {
 	return (
 		<Link
-			href={link}
+			href={`/${link}`}
 			style={{
 				textDecoration: 'none',
 			}}
