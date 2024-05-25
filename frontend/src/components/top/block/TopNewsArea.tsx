@@ -1,6 +1,9 @@
+import { TopNewsAreaProps } from '@/types';
 import { Box } from '@mui/material';
 
-export const TopNewsArea = () => {
+export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
+	const NEWSCARD_GAP = 20;
+
 	return (
 		<Box
 			width="100vw"
@@ -12,18 +15,17 @@ export const TopNewsArea = () => {
 			<Box
 				position="relative"
 				display="flex"
-				justifyContent="center"
+				justifyContent="start"
 				alignItems="center"
 				flexDirection="column"
+				gap={`${NEWSCARD_GAP}px`}
 				width="1000px"
 				height="100%"
 				maxWidth="100vw"
 				m="0 auto"
-				sx={{
-					backgroundColor: '#222',
-				}}
+				p="100px 0"
 			>
-				aaaaa
+				{children}
 			</Box>
 		</Box>
 	);
