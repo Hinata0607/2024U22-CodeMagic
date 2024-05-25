@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface TopLayoutProps {
-    children: ReactNode;
+	children: ReactNode;
 }
 
 export interface TopHeaderProps {
