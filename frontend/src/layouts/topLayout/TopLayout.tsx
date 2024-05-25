@@ -1,6 +1,6 @@
 'use client';
 import { TopBackground, TopFooter, TopHeader } from './block';
-import { TopHeaderLink } from './atom';
+import { TopHeaderLink, TopHeaderLogo } from './atom';
 import { TopLayoutProps } from '@/types';
 
 const Links = [
@@ -13,6 +13,7 @@ export const TopLayout = ({ children }: TopLayoutProps) => {
 	return (
 		<>
 			<TopHeader>
+				<TopHeaderLogo />
 				{Links.map((link, index) => (
 					<TopHeaderLink key={index} link={link.link} title={link.title} />
 				))}

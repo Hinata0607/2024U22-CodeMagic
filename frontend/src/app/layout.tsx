@@ -2,7 +2,7 @@ import { TopLayout } from '@/layouts';
 import { defaultTheme } from '@/theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import type { Metadata } from 'next';
-import "./global.css";
+import './global.css';
 
 export const metadata: Metadata = {
 	title: 'Code Magic',
