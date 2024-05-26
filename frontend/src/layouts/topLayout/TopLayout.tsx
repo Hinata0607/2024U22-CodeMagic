@@ -1,8 +1,7 @@
 'use client';
 import { TopBackground, TopFooter, TopHeader } from './block';
-import { TopHeaderLink, TopHeaderLogo } from './atom';
+import { TopHeaderLink } from './atom';
 import { TopLayoutProps } from '@/types';
-import { TopGameStartButton } from '@/components/top/atom';
 import { useBreakPoint } from '@/hooks';
 
 const Links = [
@@ -17,7 +16,6 @@ export const TopLayout = ({ children }: TopLayoutProps) => {
 	return (
 		<>
 			<TopHeader>
-				<TopHeaderLogo />
 				{Links.map((link, index) => (
 					<TopHeaderLink key={index} link={link.link} title={link.title} />
 				))}
