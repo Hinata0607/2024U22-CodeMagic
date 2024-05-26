@@ -1,27 +1,24 @@
+import { TopNewsCardProps } from '@/types';
 import { Avatar, Box, Card, Typography } from '@mui/material';
 
-export const TopNewsCard = () => {
-	const HEIGHT = 120;
-
+export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 	return (
 		<Card
 			sx={{
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				gap: '15px',
+				display: 'grid',
+				gridTemplateColumns: '200px 1fr',
 				width: '100%',
-				maxWidth: '100vw',
-				height: `${HEIGHT}px`,
+				height: '120px',
 				p: '5px',
 				backgroundColor: 'page.top.card',
+				cursor: 'pointer',
 			}}
 		>
 			<Box
-				height="100%"
-				borderRadius="5px"
-				overflow="hidden"
 				sx={{
+					height: '100%',
+					borderRadius: '5px',
+					overflow: 'hidden',
 					aspectRatio: '16/9',
 				}}
 			>
@@ -35,44 +32,73 @@ export const TopNewsCard = () => {
 				/>
 			</Box>
 			<Box
-				flexGrow={1}
-				display="flex"
-				flexDirection="column"
-				height="100%"
-				sx={{ backgroundColor: '#aff' }}
+				sx={{
+					display: 'grid',
+					gridTemplateRows: '25px 1fr',
+					width: '100%',
+					height: '100%',
+					backgroundColor: '#aff',
+					overflow: 'hidden',
+				}}
 			>
-				<Box>
-					<Box
-						display="flex"
-						justifyContent="space-between"
-						alignItems="center"
-					>
-						<Typography
-							sx={{
-								color: 'page.top.cardColor',
-							}}
-							fontWeight="bold"
-							variant="h6"
-						>
-							aaaaaaaaaaaaaa
-						</Typography>
-						<Typography
-							sx={{
-								color: 'page.top.cardColor',
-							}}
-							fontWeight="bold"
-							variant="h6"
-						>
-							aaaaaaaaaaaaaa
-						</Typography>
-					</Box>
-				</Box>
-				<Box flexGrow={1} sx={{ backgroundColor: '#ffa' }}>
+				<Box
+					sx={{
+						display: 'grid',
+						gridTemplateColumns: '80% 20%',
+						gap: "10px",
+						width: '100%',
+						height: '25px',
+						overflow: 'hidden',
+					}}
+				>
 					<Typography
 						sx={{
+							display: 'inline-block',
+							lineHeight: "25px",
+							height: '100%',
+							width: '100%',
 							color: 'page.top.cardColor',
+							overflow: 'hidden',
+							textOverflow: 'ellipsis',
+							whiteSpace: 'nowrap',
 						}}
-					></Typography>
+						fontWeight="bold"
+						variant="h6"
+					>
+						{title}
+					</Typography>
+					<Typography
+						sx={{
+							display: 'inline-block',
+							lineHeight: "25px",
+							width: '100%',
+							height: '100%',
+							color: 'page.top.cardColor',
+							overflow: 'hidden',
+							textOverflow: 'ellipsis',
+							whiteSpace: 'nowrap',
+							backgroundColor: '#afa',
+						}}
+						variant="body1"
+					>
+						{date}
+					</Typography>
+				</Box>
+				<Box sx={{ backgroundColor: '#ffa', overflow: 'hidden' }}>
+				<Typography
+					sx={{
+						width: '100%',
+						color: 'page.top.cardColor',
+						wordBreak: 'break-all',
+						overflow: 'hidden',
+						textOverflow: 'ellipsis',
+						display: '-webkit-box',
+						WebkitLineClamp: 3,
+						WebkitBoxOrient: 'vertical',
+					}}
+				>
+					{body}
+				</Typography>
 				</Box>
 			</Box>
 		</Card>
