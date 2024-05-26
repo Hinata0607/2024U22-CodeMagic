@@ -7,6 +7,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 			sx={{
 				display: 'grid',
 				gridTemplateColumns: '200px 1fr',
+				gap: "20px",
 				width: '100%',
 				height: '120px',
 				p: '5px',
@@ -35,9 +36,9 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 				sx={{
 					display: 'grid',
 					gridTemplateRows: '25px 1fr',
+					gap: "10px",
 					width: '100%',
 					height: '100%',
-					backgroundColor: '#aff',
 					overflow: 'hidden',
 				}}
 			>
@@ -45,7 +46,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 					sx={{
 						display: 'grid',
 						gridTemplateColumns: '80% 20%',
-						gap: "10px",
+						gap: "30px",
 						width: '100%',
 						height: '25px',
 						overflow: 'hidden',
@@ -56,7 +57,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 							display: 'inline-block',
 							lineHeight: "25px",
 							height: '100%',
-							width: '100%',
+							width: 'calc(100% - 30px)',
 							color: 'page.top.cardColor',
 							overflow: 'hidden',
 							textOverflow: 'ellipsis',
@@ -71,20 +72,19 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 						sx={{
 							display: 'inline-block',
 							lineHeight: "25px",
-							width: '100%',
+							width: 'calc(100% - 30px)',
 							height: '100%',
 							color: 'page.top.cardColor',
 							overflow: 'hidden',
 							textOverflow: 'ellipsis',
 							whiteSpace: 'nowrap',
-							backgroundColor: '#afa',
 						}}
 						variant="body1"
 					>
 						{date}
 					</Typography>
 				</Box>
-				<Box sx={{ backgroundColor: '#ffa', overflow: 'hidden' }}>
+				<Box sx={{ overflow: 'hidden' }}>
 				<Typography
 					sx={{
 						width: '100%',
