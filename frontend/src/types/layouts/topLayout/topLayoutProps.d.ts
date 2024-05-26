@@ -12,3 +12,7 @@ export interface TopHeaderLinkProps {
 	link: string;
 	title: string;
 }
+
+export interface TopGameStartButtonProps {
+	isFix?: boolean;
+}

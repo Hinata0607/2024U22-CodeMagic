@@ -1,1 +1,1 @@
-export * from "./TopGameStartButton"
+export * from './TopGameStartButton';
