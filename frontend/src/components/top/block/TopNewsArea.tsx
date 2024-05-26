@@ -21,7 +21,7 @@ export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
 				gap={`${NEWSCARD_GAP}px`}
 				width="1000px"
 				height="100%"
-				maxWidth="100vw"
+				maxWidth="90vw"
 				m="0 auto"
 				p="100px 0"
 			>
