@@ -1,20 +1,21 @@
+'use client';
 import { TopNewsAreaProps } from '@/types';
 import { Box } from '@mui/material';
 import { TopGameStartButton } from '../atom';
+import { useBreakPoint } from '@/hooks';
 
 export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
+	const breakpoint = useBreakPoint();
 	const NEWSCARD_GAP = 20;
 
 	return (
 		<Box
 			position="relative"
 			width="100vw"
-			height="1000px"
 			sx={{
 				backgroundColor: 'page.top.primary',
 			}}
 		>
-			<TopGameStartButton />
 			<Box
 				position="relative"
 				display="flex"
@@ -26,8 +27,9 @@ export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
 				height="100%"
 				maxWidth="90vw"
 				m="0 auto"
-				p="100px 0"
+				p={breakpoint === 'xs' ? '50px 0' : '100px 0'}
 			>
+				<TopGameStartButton isFix={breakpoint === 'xs'} />
 				{children}
 			</Box>
 		</Box>

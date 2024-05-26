@@ -7,7 +7,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 			sx={{
 				display: 'grid',
 				gridTemplateColumns: '200px 1fr',
-				gap: "20px",
+				gap: '20px',
 				width: '100%',
 				height: '120px',
 				p: '5px',
@@ -36,7 +36,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 				sx={{
 					display: 'grid',
 					gridTemplateRows: '25px 1fr',
-					gap: "10px",
+					gap: '10px',
 					width: '100%',
 					height: '100%',
 					overflow: 'hidden',
@@ -46,7 +46,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 					sx={{
 						display: 'grid',
 						gridTemplateColumns: '80% 20%',
-						gap: "30px",
+						gap: '30px',
 						width: '100%',
 						height: '25px',
 						overflow: 'hidden',
@@ -55,7 +55,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 					<Typography
 						sx={{
 							display: 'inline-block',
-							lineHeight: "25px",
+							lineHeight: '25px',
 							height: '100%',
 							width: 'calc(100% - 30px)',
 							color: 'page.top.cardColor',
@@ -71,7 +71,7 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 					<Typography
 						sx={{
 							display: 'inline-block',
-							lineHeight: "25px",
+							lineHeight: '25px',
 							width: 'calc(100% - 30px)',
 							height: '100%',
 							color: 'page.top.cardColor',
@@ -85,20 +85,20 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 					</Typography>
 				</Box>
 				<Box sx={{ overflow: 'hidden' }}>
-				<Typography
-					sx={{
-						width: '100%',
-						color: 'page.top.cardColor',
-						wordBreak: 'break-all',
-						overflow: 'hidden',
-						textOverflow: 'ellipsis',
-						display: '-webkit-box',
-						WebkitLineClamp: 3,
-						WebkitBoxOrient: 'vertical',
-					}}
-				>
-					{body}
-				</Typography>
+					<Typography
+						sx={{
+							width: '100%',
+							color: 'page.top.cardColor',
+							wordBreak: 'break-all',
+							overflow: 'hidden',
+							textOverflow: 'ellipsis',
+							display: '-webkit-box',
+							WebkitLineClamp: 3,
+							WebkitBoxOrient: 'vertical',
+						}}
+					>
+						{body}
+					</Typography>
 				</Box>
 			</Box>
 		</Card>

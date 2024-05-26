@@ -6,7 +6,7 @@ export const defaultTheme = createTheme({
 	palette: {
 		mode: 'dark',
 		primary: {
-			main: pink["A400"],
+			main: pink['A400'],
 		},
 		layout: {
 			topLayout: {

@@ -2,6 +2,8 @@
 import { TopBackground, TopFooter, TopHeader } from './block';
 import { TopHeaderLink, TopHeaderLogo } from './atom';
 import { TopLayoutProps } from '@/types';
+import { TopGameStartButton } from '@/components/top/atom';
+import { useBreakPoint } from '@/hooks';
 
 const Links = [
 	{ link: 'info', title: 'お知らせ / Info' },
@@ -10,6 +12,8 @@ const Links = [
 ];
 
 export const TopLayout = ({ children }: TopLayoutProps) => {
+	const breakpoint = useBreakPoint();
+
 	return (
 		<>
 			<TopHeader>
@@ -20,7 +24,6 @@ export const TopLayout = ({ children }: TopLayoutProps) => {
 			</TopHeader>
 			{children}
 			<TopFooter />
-
 			<TopBackground />
 		</>
 	);
