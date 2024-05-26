@@ -12,9 +12,8 @@ const Links = [
 ];
 
 export const TopLayout = ({ children }: TopLayoutProps) => {
-
 	const breakpoint = useBreakPoint();
-	
+
 	return (
 		<>
 			<TopHeader>

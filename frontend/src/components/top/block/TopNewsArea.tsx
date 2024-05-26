@@ -29,7 +29,7 @@ export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
 				m="0 auto"
 				p={breakpoint === 'xs' ? '50px 0' : '100px 0'}
 			>
-				<TopGameStartButton isFix={breakpoint === 'xs'}/>
+				<TopGameStartButton isFix={breakpoint === 'xs'} />
 				{children}
 			</Box>
 		</Box>

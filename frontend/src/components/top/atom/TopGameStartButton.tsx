@@ -2,7 +2,7 @@ import { TopGameStartButtonProps } from '@/types';
 import { Button } from '@mui/material';
 
 export const TopGameStartButton = ({
-	isFix = false
+	isFix = false,
 }: TopGameStartButtonProps) => {
 	return (
 		<Button
@@ -11,11 +11,11 @@ export const TopGameStartButton = ({
 			sx={
 				isFix
 					? {
-                        width: '500px',
-                        height: '60px',
-                        maxWidth: '90vw',
-                        margin: '0 auto',
-                        fontSize: '1.5rem',
+							width: '500px',
+							height: '60px',
+							maxWidth: '90vw',
+							margin: '0 auto',
+							fontSize: '1.5rem',
 						}
 					: {
 							zIndex: 50,
