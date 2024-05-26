@@ -1,17 +1,20 @@
 import { TopNewsAreaProps } from '@/types';
 import { Box } from '@mui/material';
+import { TopGameStartButton } from '../atom';
 
 export const TopNewsArea = ({ children }: TopNewsAreaProps) => {
 	const NEWSCARD_GAP = 20;
 
 	return (
 		<Box
+			position="relative"
 			width="100vw"
 			height="1000px"
 			sx={{
 				backgroundColor: 'page.top.primary',
 			}}
 		>
+			<TopGameStartButton />
 			<Box
 				position="relative"
 				display="flex"
