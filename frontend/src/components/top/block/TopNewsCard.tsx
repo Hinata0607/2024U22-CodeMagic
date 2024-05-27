@@ -1,15 +1,20 @@
+'use client';
+import { useBreakPoint } from '@/hooks';
 import { TopNewsCardProps } from '@/types';
 import { Avatar, Box, Card, Typography } from '@mui/material';
 
 export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
+	const breakpoint = useBreakPoint();
+
 	return (
 		<Card
 			sx={{
 				display: 'grid',
-				gridTemplateColumns: '200px 1fr',
+				gridTemplateColumns: breakpoint === 'xs' ? '' : '200px 1fr',
+				gridTemplateRows: breakpoint === 'xs' ? 'auto auto' : '',
 				gap: '20px',
 				width: '100%',
-				height: '120px',
+				height: 'auto',
 				p: '5px',
 				backgroundColor: 'page.top.card',
 				cursor: 'pointer',
@@ -34,7 +39,8 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 			</Box>
 			<Box
 				sx={{
-					display: 'grid',
+					display: breakpoint === 'xs' ? "flex" : 'grid',
+					flexDirection: "column",
 					gridTemplateRows: '25px 1fr',
 					gap: '10px',
 					width: '100%',
@@ -44,24 +50,29 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 			>
 				<Box
 					sx={{
-						display: 'grid',
-						gridTemplateColumns: '80% 20%',
-						gap: '30px',
+						display: breakpoint === 'xs' ? "flex" : 'grid',
+						flexDirection: "column",
+						gridTemplateColumns: breakpoint === 'xs' ? '' : '1fr 100px',
+						gridTemplateRows: breakpoint === 'xs' ? 'auto auto' : '',
+						gap: breakpoint === 'xs' ? "10px" : '30px',
 						width: '100%',
-						height: '25px',
+						height: breakpoint === 'xs' ? "fit-content" : '25px',
 						overflow: 'hidden',
 					}}
 				>
 					<Typography
 						sx={{
-							display: 'inline-block',
+							display: breakpoint === 'xs' ? '-webkit-box' : 'inline-block',
 							lineHeight: '25px',
 							height: '100%',
-							width: 'calc(100% - 30px)',
+							width: breakpoint === 'xs' ? "100%" : 'calc(100% - 30px)',
 							color: 'page.top.cardColor',
 							overflow: 'hidden',
 							textOverflow: 'ellipsis',
-							whiteSpace: 'nowrap',
+							whiteSpace: breakpoint === 'xs' ? "normal" : 'nowrap',
+							wordBreak: breakpoint === 'xs' ? 'break-all' : "normal",
+							WebkitLineClamp: 3,
+							WebkitBoxOrient: 'vertical',
 						}}
 						fontWeight="bold"
 						variant="h6"
@@ -72,12 +83,10 @@ export const TopNewsCard = ({ title, date, body }: TopNewsCardProps) => {
 						sx={{
 							display: 'inline-block',
 							lineHeight: '25px',
-							width: 'calc(100% - 30px)',
+							width: breakpoint === 'xs' ? "100%" : 'calc(100% - 30px)',
 							height: '100%',
 							color: 'page.top.cardColor',
-							overflow: 'hidden',
-							textOverflow: 'ellipsis',
-							whiteSpace: 'nowrap',
+							textAlign: breakpoint === 'xs' ? "left" : "right",
 						}}
 						variant="body1"
 					>
