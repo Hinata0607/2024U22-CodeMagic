@@ -4,19 +4,32 @@ import React from 'react';
 
 const GameTopHeader = () => {
 	return (
-		<div style={{ display: 'flex' }}>
+		<div
+			style={{
+				position: 'relative',
+				height: '120px',
+				backgroundColor: '#999',
+			}}
+		>
 			<ArrowCircleLeftIcon
 				style={{
-					position: 'relative',
-					margin: '5vh 3vw',
+					position: 'absolute',
+					top: '5vh',
+					left: '3vw',
 					fontSize: '48px',
+					color: 'white',
+					backgroundColor: 'transparent',
+					borderRadius: '50%',
 				}}
 			/>
 			<SettingsIcon
 				style={{
-					position: 'relative',
-					margin: '5vh 176vh',
+					position: 'absolute',
+					top: '5vh',
+					right: '3vw',
 					fontSize: '48px',
+					color: 'white',
+					backgroundColor: 'transparent',
 				}}
 			/>
 		</div>
