@@ -57,39 +57,42 @@ const PageSelectPage = () => {
   const contentWidth = '100%'; // コンテンツの幅を親要素に合わせる
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh" bgcolor="#E0E0E0" p={2}>
-      <Box position="absolute" top={126} left={86} sx={{ zIndex: 1300 }} bgcolor="black">
+    <Box display="flex" flexDirection="column" height="100vh" p={2}>
+      <Box position="absolute" top={55} left={65} sx={{ zIndex: 1300 }} bgcolor="black">
         <IconButton>
-          <ArrowBackIcon />
+          <ArrowBackIcon style={{ color: 'white' }} />
         </IconButton>
       </Box>
       <Box display="flex" width="100%" justifyContent="center" alignItems="center" flexGrow={1}>
-        <Paper elevation={3} style={{ flex: 1, padding: 16, marginRight: 16, maxWidth: '45%', margin: "0 auto" }}>
+        <Paper elevation={3} style={{ flex: 1, padding: 16, marginRight: 16, maxWidth: '45%', margin: '0 auto' }}>
           <Box width={contentWidth} display="flex" justifyContent="center">
             <Image src="/thumbnail.webp" alt="ステージ画像" width={600} height={300} />
           </Box>
           <Box
-            width={contentWidth}
+            width={550}
             height={150}
             my={1}
             display="flex"
             flexDirection="column"
             alignItems="center"
             gap={2}
-            p={2}
+            p={3}
             sx={{ border: '2px solid grey' }}
+            style={{ margin: '15px auto 0 auto ' }}
           >
-            <Typography variant="h6" textAlign="left" width="100%">ステージ名</Typography>
+            <Typography variant="h6" textAlign="left" width="100%">
+              ステージ名
+            </Typography>
             <Typography variant="body1" textAlign="left" width="100%">
               ステージ説明が入りますステージ説明が入りますステージ説明が入りますステージ説明が入ります
               ステージ説明が入りますステージ説明が入ります
             </Typography>
           </Box>
         </Paper>
-        <Paper elevation={3} style={{ flex: 1, padding: 16, maxWidth: '45%', height: '500px', overflowY: 'scroll' }}>
+        <Paper elevation={3} style={{ flex: 1, padding: 24, maxWidth: '45%', height: '500px', overflowY: 'scroll' }}>
           <List>
             {stageList.map((stage) => (
-              <ListItem key={stage.id} button>
+              <ListItem key={stage.id} button style={{ borderBottom: '1px solid black' }}>
                 <ListItemText primary={stage.stage_name} secondary={stage.stage_details} />
               </ListItem>
             ))}
