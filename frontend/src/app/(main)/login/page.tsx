@@ -62,7 +62,7 @@ const PageLogin = () => {
         <Box display="flex" flexDirection="column" alignItems="center" width="550px" marginTop={2}>
           <TextField fullWidth margin="normal" label="メールアドレス" variant="outlined" />
           <TextField fullWidth margin="normal" label="パスワード" type="password" variant="outlined" />
-          <Typography marginTop={1} alignSelf="flex-start" style={{ color: 'black' }}>
+          <Typography marginTop={1} alignSelf="flex-end" style={{ color: 'black' }}>
             パスワードを忘れた方は 
             <Link href="#" color="textSecondary" underline="hover" style={{ color: 'black', fontWeight: 'bold' }}>
               こちら
